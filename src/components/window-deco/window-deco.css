@@ -1,0 +1,91 @@
+.window-deco {
+    height: 30px;
+    width: 100%;
+    background: #303030;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-basis: auto;
+
+    user-select: none;
+}
+
+.window-deco__title-bar {
+    flex-grow: 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.window-deco__drag-overlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.window-deco__title-box {
+    position: fixed;
+    left: 0;
+    padding-left: 10px;
+    font-size: medium;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.window-deco__title-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: transparent;
+
+}
+
+.window-deco__title-button {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: transparent;
+
+    border: none;
+    fill: #ffffff;
+}
+
+.window-deco__title-button:hover {
+    background: #888888;
+    fill:#1a1a1a;
+
+    transition: all 0.15s ease-in-out;
+}
+.window-deco__title-button-exit:hover {
+    background: #a73e3e;
+    stroke:#1a1a1a;
+    fill:#1a1a1a;
+    
+    transition: all 0.15s ease-in-out;
+}
+
+.window-deco__title-svg {
+    width: 18px;
+    height: 18px;
+    fill: inherit;
+    stroke: inherit;
+}
