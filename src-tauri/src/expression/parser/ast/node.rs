@@ -1,21 +1,3 @@
-/*
- * <start> ::= '=' <or_expr>
- * <or_expr> ::= <and_expr> {'or' <and_expr>}
- * <and_expr> ::= <not_expr> {'and' <not_expr>}
- * <not_expr> ::= '!' <not_expr> | <cmp_expr>
- * <cmp_expr> ::= <add_expr> {('==' | '!=' | '<' | '<=' | '>' | '>=') <add_expr>}
- * <add_expr> ::= <mul_expr> {('+' | '-') <mul_expr>}
- * <mul_expr> ::= <pow_expr> {('*' | '/' | '%') <pow_expr>}
- * <pow_expr> ::= <unary_expr> {'^' <unary_expr>}
- * <unary_expr> ::= {'-'} <primary_expr>
- * <primary_expr> ::= <number> | <string> | <boolean> | <variable> | <function> | '(' <or_expr> ')'
- * <function> ::= <identifier> <arg_list>
- * <variable> ::= <identifier> | <col_spec>
- * <col_spec> ::= ':' <number> [ <colfilter> ]
- * <colfilter> ::= ('rand' | 'min' | 'max' | <identifier>) '@' <number>
- * <arg_list> ::= '(' [<or_expr> {',' <or_expr>}] ')'
- */
-
 use log::{debug, info};
 
 #[derive(Debug, Clone, Copy, PartialEq)]

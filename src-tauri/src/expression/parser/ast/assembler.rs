@@ -68,7 +68,7 @@ impl Assembler {
             self.advance();
             Ok(Node::UnaryOp {
                 op: Some(UnaryOpType::Not),
-                right: Box::new(self.parse_cmp_expr()?),
+                right: Box::new(self.parse_not_expr()?),
             })
         } else {
             self.parse_cmp_expr()
