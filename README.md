@@ -4,7 +4,7 @@ A clone of excel, written in Rust.
 
 Designed to be a simple demo, not a full-featured spreadsheet.
 
-Based on a column-oriented data model, with expressions for cell values.
+Based on a column-oriented data model.
 
 Planned features include:
 
@@ -20,12 +20,14 @@ Planned features include:
     - Capable of evaluating expressions and using column references
 - Save and load functionality
   - Custom binary format
+    - Based (very loosely) on the Parquet format
   - CSV export
   - No support for Excel files (ISO 29500) due to complexity
 
 Possible features include:
 
 - A simple formula editor
+- Assistants for common tasks (formula verification/debugging, etc.)
 
 ## Roadmap
 
@@ -61,3 +63,13 @@ Possible features include:
   - [ ] Save Format
     - [ ] Binary
     - [ ] CSV
+
+## UI Mockup
+
+![UI Mockup](ui_mockup.png)
+
+## License
+
+This project is entirely a personal project, and as such follows the terms of the Unlicense. See the [LICENSE](./LICENSE) file for more information.
+
+It is intended as a test of my abilities and a demonstration of my skills, and is not intended for any other purpose.
