@@ -2,7 +2,7 @@
 
 A clone of excel, written in Rust.
 
-Designed to be a simple demo, not a full-featured spreadsheet.
+Designed to be a simple demo, not a full-featured spreadsheet. For more details see [my rationale](./docs/README.md)
 
 Based on a column-oriented data model.
 
@@ -28,6 +28,8 @@ Possible features include:
 
 - A simple formula editor
 - Assistants for common tasks (formula verification/debugging, etc.)
+- A simple graphing tool
+- Some basic querying capabilities (filter, map, sort, join etc.)
 
 ## Roadmap
 
@@ -57,12 +59,14 @@ Possible features include:
   - [ ] Expressions
   - [ ] Column References
 - [ ] File I/O
-  - [ ] Save
-  - [ ] Load
-  - [ ] Export
-  - [ ] Save Format
-    - [ ] Binary
-    - [ ] CSV
+  - [ ] Binary
+    - [ ] Save
+    - [ ] Load
+    - [ ] Export
+  - [ ] CSV
+    - [ ] Save
+    - [ ] Load
+    - [ ] Export
 
 ## UI Mockup
 
