@@ -115,37 +115,42 @@ impl Expression {
     pub fn from_ast(ast: Node) -> ExpressionResult<Self> {
         let ast = ast.reduce();
         Ok(Expression {
-            root: Self::from_ast_node(*ast),
+            root: Self::from_ast_node(*ast)?,
         })
     }
 
-    fn from_ast_node(node: Node) -> ExprNode {
-        match node {
+    fn from_ast_node(node: Node) -> ExpressionResult<ExprNode> {
+        Ok(match node {
             Node::BinaryOp {
                 left,
                 right: Some((op, right)),
             } => ExprNode::BinaryOp {
-                left: Box::new(Self::from_ast_node(*left)),
+                left: Box::new(Self::from_ast_node(*left)?),
                 op: BinaryOpType::from_binary_op(op),
-                right: Box::new(Self::from_ast_node(*right)),
+                right: Box::new(Self::from_ast_node(*right)?),
             },
             Node::UnaryOp {
                 op: Some(op),
                 right,
             } => ExprNode::UnaryOp {
                 op: UnaryOpType::from_unary_op(op),
-                right: Box::new(Self::from_ast_node(*right)),
+                right: Box::new(Self::from_ast_node(*right)?),
             },
             Node::Number(_) | Node::Boolean(_) | Node::String(_) => ExprNode::Literal {
                 value: LiteralValue::from_literal(node),
             },
             Node::Identifier(name) => ExprNode::Variable { name: name.0 },
             Node::Function { name, args } => ExprNode::FunctionCall {
-                target: Function::from_string(name.0),
-                args: args.into_iter().map(Self::from_ast_node).collect(),
+                target: Function::from_str(&name.0)
+                    .ok_or("Unknown function")
+                    .unwrap(),
+                args: args
+                    .into_iter()
+                    .map(Self::from_ast_node)
+                    .collect::<ExpressionResult<Vec<ExprNode>>>()?,
             },
             _ => unreachable!(),
-        }
+        })
     }
 
     fn eval_static(&self) -> Self {

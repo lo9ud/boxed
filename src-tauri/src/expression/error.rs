@@ -46,7 +46,7 @@ impl ExpressionError {
 
     pub fn type_error(expected: &ValueType, found: &ValueType, position: Position) -> Self {
         ExpressionError {
-            message: format!("Type {} not valid, require {}", expected, found),
+            message: format!("Type {:?} not valid, require {:?}", expected, found),
             position: Some(position),
             source: None,
         }

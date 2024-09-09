@@ -1,0 +1,8 @@
+.statusline {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  flex-grow: 0;
+  background: #757575;
+  padding: 2px;
+}

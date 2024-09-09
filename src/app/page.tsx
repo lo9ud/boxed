@@ -1,16 +1,12 @@
-import SplashSection from "@/components/splash/section/section";
-import SplashNewSelector from "@/components/splash/splash-new-selector/splash-new-selector";
-import SplashOpenSelector from "@/components/splash/splash-open-selector/splash-open-selector";
-
+import StatusLine from "@/components/statusline/statusline";
+import Toolbar from "@/components/toolbar/toolbar";
+import GridDisplay from "@/components/grid/grid";
 export default function Home() {
   return (
     <main>
-      <SplashSection title="New">
-        <SplashNewSelector/>
-      </SplashSection>
-      <SplashSection title="Open">
-        <SplashOpenSelector/>
-      </SplashSection>
+      <Toolbar />
+      <GridDisplay />
+      <StatusLine />
     </main>
   );
 }

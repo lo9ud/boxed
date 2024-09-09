@@ -1,3 +1,4 @@
+#[derive(Debug, PartialEq)]
 pub enum Value {
     Number(f64),
     String(String),
@@ -7,6 +8,7 @@ pub enum Value {
     Null,
 }
 
+#[derive(Debug, PartialEq)]
 pub enum ValueType {
     Number,
     String,

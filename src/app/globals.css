@@ -1,5 +1,5 @@
 :root {
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -7,7 +7,7 @@
 }
 
 /* * {
-  border: #FF00FF 1px dashed !important;
+  border: #ff00ff 1px dashed !important;
 } */
 
 body {
@@ -24,10 +24,15 @@ body {
 }
 
 main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  height: 100%;
   flex-grow: 1;
   padding: 0;
   margin: 0;
-
-  background: #000;
+  border: #aaa 2px solid;
+  margin: 1px;
 }
