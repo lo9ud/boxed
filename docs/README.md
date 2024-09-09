@@ -25,3 +25,5 @@ This document is intended to provide a high-level overview of the project, its g
   - React is a good choice for this project because it allows for easy state management and updating, which is important for a spreadsheet-like application, as well as rapid prototyping and development.
 
 - [**File I/O**](./files.md): I chose to use a custom binary format for saving and loading as a challenge for myself. This format is based on the Parquet format, but is much simpler. I chose not to support Excel files due to the complexity of the ISO 29500 standard.
+
+- [**Type System**](./types.md): I chose to use a simple type system with no implicit type conversions. This is to avoid the ambiguity that can arise from implicit type conversions, and to make the system easier to reason about.
