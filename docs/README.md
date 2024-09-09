@@ -2,6 +2,8 @@
 
 This document is intended to provide a high-level overview of the project, its goals, and the rationale behind the decisions made during its development.
 
+(These docs also serve as a reference for me to remember what I was thinking when I made these decisions.)
+
 ## Goals
 
 - Demonstrate my ability to design and implement a complex system
@@ -14,7 +16,7 @@ This document is intended to provide a high-level overview of the project, its g
 
 ## Design Decisions
 
-- **Expressions**: I chose a recursive descent parser, as it naturally models the structure of the simple expression grammar. Additionally, it is easy to implement typechecking in the parsing stage when usnig this method.
+- [**Expressions**](./expressions.md): I chose a recursive descent parser, as it naturally models the structure of the simple expression grammar. Additionally, it is easy to implement typechecking in the parsing stage when usnig this method.
 
 - [**Evaluation**](./expressions.md): I chose a simple recursive, bottom-up evaluation strategy. This is simple to implement and understand, and is sufficient for the simple expressions I am working with.
 
